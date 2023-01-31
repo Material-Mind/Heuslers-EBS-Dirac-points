@@ -15,6 +15,9 @@
 \usepackage{float}
 \usepackage{authblk}
 \usepackage{caption}
+\usepackage[hang]{subfigure}
+\usepackage{chemformula}
+\usepackage{siunitx}
 \captionsetup[figure]{labelfont={bf},name={Figure},labelsep=period}
 \captionsetup[table]{labelfont={bf},name={Table},position=top,labelsep=period}
 \renewcommand{\thefigure}{S\arabic{figure}}
@@ -51,6 +54,27 @@
 %\begin{abstract}
 %Your abstract.
 %\end{abstract}
+\section*{Section S1. EBS representing material behaviors}
+\begin{figure}[H]
+    \centering
+    \subfigure[]{
+        \includegraphics[width=3.0in]{figures/mp-126_band-structure.png}
+        \label{fig:Pt_EBS}
+    }
+
+    \subfigure[]{
+        \includegraphics[width=3.0in]{figures/mp-149_band-structure.png}
+        \label{fig:Si_EBS}
+    }
+
+    \subfigure[]{
+        \includegraphics[width=3.0in]{figures/mp-66_band-structure.png}
+        \label{fig:Si_EBS}
+    }
+    \caption{comparison of EBSs for metallic vs semiconducting vs insulating behavior using: a) metallic (\ch{Pt}), b) semiconducting (\ch{Si}), and c) insulating (Diamond) properties. The energies of the band gaps are \SI{4.34}{\electronvolt} for Diamond, \SI{0.85}{\electronvolt} for \ch{Si} and \SI{0.0}{\electronvolt} for \ch{Pt}. These EBSs were taken from Materials Project (MP) database \cite{Jain2013,jain2013commentary,ong2015materials}.}
+    \label{fig:EBS_classical}
+\end{figure}
+
 \section*{Section S1. Feature Engineering}
 The table \ref{Tab:PF} lists properties used as primary features (PFs) and their definition. Tables \ref{Tab:PF_Cubic} and \ref{Tab:PF_Heusler} list the selected features for the development of Heusler and Cubic compounds datasets ML models respectively.
 
